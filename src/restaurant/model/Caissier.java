@@ -27,6 +27,6 @@ public class Caissier extends Employe {
 
     @Override
     public String toString() {
-        return "Caissier []";
+        return "Caissier [id=" + id + ", nom=" + nom + "]";
     }
 }

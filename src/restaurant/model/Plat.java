@@ -69,7 +69,7 @@ public class Plat {
     }
 
 
-
+    //class object
     @Override
     public String toString() {
         return "Plat [idPlat=" + idPlat + ", nom=" + nom + ", prix=" + prix + ", categorie=" + categorie + "]";
