@@ -1,48 +1,117 @@
 package restaurant.model;
 
-public class Client {
-private int idClient;
-private String nom;
-private String telephone;
+/**
+ * Classe representant un client du restaurant
+ * Implements l'interface Affichable pour afficher les details
+ */
+public class Client implements Affichable {
+    // Identifiant unique du client
+    private int idClient;
+    // Nom du client
+    private String nom;
+    // Numero de telephone
+    private String telephone;
+    // Adresse du client
+    private String adresse;
 
-public Client(int idClient, String nom, String telephone) {
-    this.idClient = idClient;
-    this.nom = nom;
-    this.telephone = telephone;
-}
+    /**
+     * Constructeur avec parametres
+     * @param idClient l'ID du client
+     * @param nom le nom
+     * @param telephone le telephone
+     * @param adresse l'adresse
+     */
+    public Client(int idClient, String nom, String telephone, String adresse) {
+        this.idClient = idClient;
+        this.nom = nom;
+        this.telephone = telephone;
+        this.adresse = adresse;
+    }
 
-public Client() {
-}
+    /**
+     * Constructeur par defaut
+     */
+    public Client() {
+    }
 
-public int getIdClient() {
-    return idClient;
-}
+    /**
+     * Retourne l'ID du client
+     * @return l'ID
+     */
+    public int getIdClient() {
+        return idClient;
+    }
 
-public String getNom() {
-    return nom;
-}
+    /**
+     * Retourne le nom du client
+     * @return le nom
+     */
+    public String getNom() {
+        return nom;
+    }
 
-public String getTelephone() {
-    return telephone;
-}
+    /**
+     * Retourne le telephone
+     * @return le numero de telephone
+     */
+    public String getTelephone() {
+        return telephone;
+    }
 
-public void setIdClient(int idClient) {
-    this.idClient = idClient;
-}
+    /**
+     * Retourne l'adresse
+     * @return l'adresse
+     */
+    public String getAdresse() {
+        return adresse;
+    }
 
-public void setNom(String nom) {
-    this.nom = nom;
-}
+    /**
+     * Definit l'ID du client
+     * @param idClient le nouvel ID
+     */
+    public void setIdClient(int idClient) {
+        this.idClient = idClient;
+    }
 
-public void setTelephone(String telephone) {
-    this.telephone = telephone;
-}
+    /**
+     * Definit le nom du client
+     * @param nom le nouveau nom
+     */
+    public void setNom(String nom) {
+        this.nom = nom;
+    }
 
-@Override
-public String toString() {
-    return "Client [idClient=" + idClient + ", nom=" + nom + ", telephone=" + telephone + "]";
-}
+    /**
+     * Definit le telephone
+     * @param telephone le nouveau numero
+     */
+    public void setTelephone(String telephone) {
+        this.telephone = telephone;
+    }
 
+    /**
+     * Definit l'adresse
+     * @param adresse la nouvelle adresse
+     */
+    public void setAdresse(String adresse) {
+        this.adresse = adresse;
+    }
 
+    /**
+     * Retourne une representation texte du client
+     * @return une chaine decrivant le client
+     */
+    @Override
+    public String toString() {
+        return "Client [id=" + idClient + ", nom=" + nom + ", tel=" + telephone + ", adresse=" + adresse + "]";
+    }
 
+    /**
+     * Affiche les details du client dans la console
+     */
+    @Override
+    public void afficherDetails() {
+        System.out.println(toString());
+    }
 }
